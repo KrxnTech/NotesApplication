@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Home 🏠</h1>
+        <a class="btn" href="/AddNote">➕ Add note</a>
+
+        <h2>Notes added by you 🗒️</h2>
+        <!-- PRINTING THE NOTE -->
+        <% for (let x of NOTES) { %>
+            <div class="note-item">
+                <input type="checkbox" />
+                <span>📝 <%= x.note %></span>
+                <a class="dbtn" href="">Delete Note</a>
+            </div>
+        <% } %>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
